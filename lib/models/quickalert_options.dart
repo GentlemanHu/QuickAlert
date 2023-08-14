@@ -57,6 +57,9 @@ class QuickAlertOptions {
   /// Determines if cancel button is shown or not
   bool? showCancelBtn;
 
+  /// Determines if confirm button is shown or not
+  bool? showConfirmBtn;
+
   /// Dialog Border Radius
   double? borderRadius;
   double? buttonBorderRadius;
@@ -66,12 +69,15 @@ class QuickAlertOptions {
 
   /// Width of the dialog
   double? width;
- 
- Timer? timer;
+
+  /// timer for dismissing dialog (Ok button)
+  Timer? timer;
+
   /// Alert Options
   QuickAlertOptions({
     /// Title of the dialog
     this.title,
+
     /// Text of the dialog
     this.text,
 
@@ -120,6 +126,9 @@ class QuickAlertOptions {
     /// Determines if cancel button is shown or not
     this.showCancelBtn,
 
+    /// Determines if confirm button is shown or not
+    this.showConfirmBtn,
+
     /// Dialog Border Radius
     this.borderRadius,
     this.buttonBorderRadius,
@@ -130,7 +139,7 @@ class QuickAlertOptions {
     /// Width of the dialog
     this.width,
 
-    //timer for dismissing dialog (Ok button)
+    /// timer for dismissing dialog (Ok button)
     this.timer,
   });
 }
